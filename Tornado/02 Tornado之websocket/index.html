@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+
+    <h1>websocket示例</h1>
+
+    <script>
+        ws = new WebSocket('ws://127.0.0.1:8888/msg');
+        ws.onmessage = function (event) {
+            console.log(event.data)
+        }
+    </script>
+
+
+
+</body>
+</html>

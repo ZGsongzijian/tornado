@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表</title>
+    <!--<link rel="stylesheet" href="/static/commons.css">-->
+    <link rel="stylesheet" href="{{ static_url('commons.css') }}"> <!--实现静态文件缓存-->
+</head>
+<body>
+    <!--<h1>用户列表</h1>-->
+    <table border="1">
+        {% for item in users %}
+        <tr>
+            <td>{{ item['id'] }}</td>
+            <td>{{ item.get('name') }}</td>
+        </tr>
+        {% end %}
+    </table>
+
+</body>
+</html>
